@@ -70,7 +70,7 @@ args.set_defaults(
 )
 a = args.parse_args()
 
-adjust = a.adjust
+adjusted = a.adjust
 ft_sub_8 = a.ft
 exclude = a.exclude
 acc_zeros = a.use_zeroes
@@ -176,7 +176,7 @@ for index in list:
         else:
             print('{:9.4f}'.format(gps), end=' ')
             print('{:8.4f}'.format(pec), end=' ')
-        print('{:<12}'.format(remainder[0]))
+        print('{:<12}'.format(a.clocks))
 if not adjusted:
     print('Diff: amount to add to Used to agree with historical peculiar offsets')
     print('X: deleted flag, Residual: Diff-Diff_mean, NR=Residual/std, NRH=Residual/RMS')
